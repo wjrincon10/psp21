@@ -1,38 +1,28 @@
+/*
+ * Paquete para probar el modelo 
+ */
 package edu.uniandes.ecos;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static junit.framework.Assert.assertTrue;
+import edu.uniandes.ecos.psp21.model.CalcularSimpson;
 
 /**
- * Unit test for simple App.
+ * Clase para probar la clase CalcularSimsons 
+ * @author wilman rincon
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest {
     /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
-
-    /**
-     * Rigourous Test :-)
+     * verifica el valor esperado para un valor de X y Dof dado
      */
     public void testApp()
     {
+        double p=0.20;
+        double dof = 6;
+        double x = 0.55338;
+        
+        CalcularSimpson calcSimpson = new CalcularSimpson(p,dof);
+        
+        calcSimpson.integral();
         assertTrue( true );
     }
 }

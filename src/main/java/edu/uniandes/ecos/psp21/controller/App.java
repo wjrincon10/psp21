@@ -70,16 +70,16 @@ public class App extends HttpServlet{
         String calcx = req.getParameter("calcx");
         String calcy = req.getParameter("calcy");
 
-        double x = Double.valueOf(calcx);
+        double p = Double.valueOf(calcx);
         double dof = Double.valueOf(calcy);
         double resul = 0;
         
-        CalcularSimpson calcSimpson = new CalcularSimpson(x,dof);
+        CalcularSimpson calcSimpson = new CalcularSimpson(p,dof);
         
         
         resul = calcSimpson.integral();
         
-        MainView.showResults(req, resp, x, dof, resul);
+        MainView.showResults(req, resp, p, dof, resul);
        }catch(Exception ex){
          MainView.error(req, resp);
        }

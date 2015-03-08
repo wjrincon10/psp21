@@ -24,10 +24,10 @@ public class MainView {
         
         PrintWriter pw = resp.getWriter();
         pw.write("<html>");
-        pw.println("<h1>PSP 2.0 Program!</h1>");
+        pw.println("<h1>PSP 2.1 Program!</h1>");
         
          pw.write("<form action=\"calc\" method=\"post\"> \n" +
-                "    Ingrese X: <input type=\"text\" name=\"calcx\">\n" +
+                "    Ingrese p: <input type=\"text\" name=\"calcx\">\n" +
                 "    Ingrese Dof: <input type=\"text\" name=\"calcy\">\n" +
                 "    <input type=\"submit\" value=\"Calc\">\n" +
                 "</form> ");
